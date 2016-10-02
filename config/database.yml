@@ -15,7 +15,7 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: hellorails_production
   username: hellorails
   password: <%= ENV['HELLORAILS_DATABASE_PASSWORD'] %>
