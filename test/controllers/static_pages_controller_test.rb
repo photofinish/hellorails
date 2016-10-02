@@ -7,8 +7,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "shoutd get root" do
-    get FILL_IN
-    assert_response FILL_IN
+    get root_url
+    assert_response :success
   end
 
   test "should get home" do
