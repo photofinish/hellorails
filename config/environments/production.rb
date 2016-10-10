@@ -1,7 +1,7 @@
 Rails.application.configure do
 
   config.force_sll = true
-
+  config.active_record.time_zone_aware_types = [:datetime]
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
