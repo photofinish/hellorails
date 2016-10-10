@@ -6,6 +6,8 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.active_record.time_zone_aware_types = [:datetime]
+
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -27,7 +29,13 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = :test
+
+  host = '192.168.1.4:3000'
+
+  config.action_mailer.default_url_options = { host: host, protocol: 'https'}
 
   config.action_mailer.perform_caching = false
 
