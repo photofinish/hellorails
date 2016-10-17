@@ -20,4 +20,5 @@
 /.idea/*
 /log.txt
 /public/uploads
-
+/hellorails_development
+/hellorails_test
