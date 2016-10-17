@@ -19,3 +19,4 @@
 /spring/*.pid
 /.idea/*
 /log.txt
+public/uploads/
